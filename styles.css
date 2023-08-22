@@ -7,12 +7,20 @@
 
 }
 
+@font-face {
+  font-family: 'robotobold';
+  src: url('./fonts/roboto-bold-webfont.woff2') format('woff2'),
+       url('./fonts/roboto-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 * {
   padding: 0;
   margin: 0;
   border: 0;
   font-family: 'robotoregular', Roboto, system-ui, sans-serif;
-  color: white;
   font-size: 100%;
   list-style: none;
 }
@@ -29,8 +37,6 @@ body {
   margin-right: 20px;
   margin-left: 6px;
   vertical-align: middle;
-  padding: 0;
-  
 }
 
 .sidebar {
@@ -42,6 +48,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 80px 0.6fr 1fr;
   justify-content: start;
+  color: #fff;
 }
 
 .sidebar-heading > img {
@@ -69,13 +76,12 @@ body {
 .header {
   background-color: #f59e0b;
   grid-area: 1 / 2 / 2 / 3;
-  padding: 10px;
+  padding: 20px 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
   grid-template-rows:  1fr 1fr;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  color: black;
 }
-
 
 .search-bar {
   grid-area: 1 / 1 / 2 / 2;
@@ -92,6 +98,36 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
   width: 100%;
+}
+
+.search-nav {
+  grid-area: 1 / 2 / 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-self: end;
+  align-items: start;
+}
+
+.circle-photo {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px #1e3a8a solid;
+  margin-top: -5px;
+}
+
+.circle-photo img {
+  width: 100%;
+  height: 100%;
+  border: 2px #1e3a8a solid;
+}
+
+#profile-name {
+  font-family: 'robotobold';
+  font-size: 20px;
+  padding-top: 5px;
 }
 
 .main-content {
