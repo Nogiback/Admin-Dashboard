@@ -27,8 +27,10 @@ body {
 
 .material-icons {
   margin-right: 20px;
-  margin-left: 8px;
+  margin-left: 6px;
   vertical-align: middle;
+  padding: 0;
+  
 }
 
 .sidebar {
@@ -67,27 +69,34 @@ body {
 .header {
   background-color: #f59e0b;
   grid-area: 1 / 2 / 2 / 3;
+  padding: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows:  1fr 1fr;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+.search-bar {
+  grid-area: 1 / 1 / 2 / 2;
+  white-space: nowrap;
 }
 
 #search {
-  width: 350px;
-  border: 3px solid #fff;
-  background: transparent;
-  padding: 15px 30px;
+  background:rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
   border-radius: 50px;
   outline: none;
   font-size: 18px;
   color: #fff;
   font-weight: bold;
   letter-spacing: 1px;
+  width: 100%;
 }
 
 .main-content {
-  background-color: blue;
-  background-image: url(./images/y-so-serious.png);
+  background-color: white;
+  background-image: url(./images/y-so-serious-white.png);
   background-repeat: repeat;
   grid-area: 2 / 2 / 3 / 3;
 }
