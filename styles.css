@@ -32,6 +32,11 @@ body {
   grid-template-rows: minmax(200px, 1fr) 4fr;
 }
 
+.material-icons {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
 h3 {
   font-family: 'robotobold';
   font-size: 1.3rem;
@@ -46,10 +51,9 @@ h5 {
 
 /*----------------------------SIDEBAR----------------------------*/
 
-.material-icons {
+.sidebar .material-icons {
   margin-right: 20px;
   margin-left: 6px;
-  vertical-align: middle;
 }
 
 .sidebar {
@@ -85,6 +89,7 @@ h5 {
 .main-links > ul > li,
 .other-links > ul > li {
   margin-top: 15px;
+  cursor: pointer;
 }
 
 /*----------------------------HEADER----------------------------*/
@@ -180,7 +185,7 @@ h5 {
 
 button {
   padding: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   border-radius: 50px;
   background-color:#1e3a8a;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -188,6 +193,7 @@ button {
   margin-top: 20px;
   min-width: 120px;
   color: white;
+  cursor: pointer;
 }
 
 /*----------------------------MAIN CONTENT----------------------------*/
@@ -233,11 +239,104 @@ button {
   color: rgb(121, 121, 121);
 }
 
+.main-cards .card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .actions {
   display: flex;
   align-self: flex-end;
   justify-content: flex-end;
   margin-top: auto;
   align-items: center;
+  gap: 1.5rem;
 }
 
+.actions i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.announcements {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+
+.announcement h5 {
+  font-size: 0.92rem;
+  margin-top: 0.5rem;
+}
+
+.announcement p {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.announcement + .announcement {
+  border-top: 1px solid lightgray;
+}
+
+.trending {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.trending .card {
+  padding: 1.5rem;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.trend + .trend {
+  margin-top: 1.5rem;
+}
+
+.trend .picture {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.trend .account {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.trend .username {
+  font-family: 'robotobold';
+  margin-bottom: 0.2rem;
+}
+
+.trend-1 .picture {
+  background-image: url(./images/3d-illustration-person-with-glasses_23-2149436185.avif);
+  background-size: cover;
+}
+
+.trend-2 .picture {
+  background-image: url(./images/iroh.png);
+  background-size: cover;
+}
+
+.trend-3 .picture {
+  background-image: url(./images/3d-illustration-person-with-sunglasses_23-2149436180.avif);
+  background-size: cover;
+}
+
+.trend-4 .picture {
+  background-image: url(./images/3d-illustration-person-with-sunglasses_23-2149436188.avif);
+  background-size: cover;
+}
